@@ -3,6 +3,17 @@
 import streamlit as st
 import google.generativeai as genai
 
+# Load your API key securely from Streamlit secrets
+genai.configure(api_key=st.secrets["gemini_api_key"])
+
+# Then use Gemini in your logic
+response = genai.GenerativeModel("gemini-pro").generate_content("Hello!")
+st.write(response.text)
+
+
+import streamlit as st
+import google.generativeai as genai
+
 st.set_page_config(page_title="AI Career Counselor", layout="centered")
 
 # Load Gemini API key
