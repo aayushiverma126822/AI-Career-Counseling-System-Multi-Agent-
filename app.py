@@ -6,7 +6,7 @@ import google.generativeai as genai
 st.set_page_config(page_title="AI Career Counselor", layout="centered")
 
 # Load Gemini API key
-genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
+genai.configure(api_key=st.secrets["AIzaSyBT_YwE11vpusexvce8Vn76KuvWsvqNyIA"])
 
 model = genai.GenerativeModel("gemini-pro")
 
