@@ -4,7 +4,7 @@ import streamlit as st
 import google.generativeai as genai
 
 # Load your API key securely from Streamlit secrets
-genai.configure(api_key=st.secrets["AIzaSyBT_YwE11vpusexvce8Vn76KuvWsvqNyIA"])
+genai.configure(api_key=st.secrets["gemini_api_key"])
 
 # Then use Gemini in your logic
 response = genai.GenerativeModel("gemini-pro").generate_content("Hello!")
